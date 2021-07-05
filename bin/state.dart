@@ -1,6 +1,6 @@
 abstract class ClockState {
-  ClockState({this.hh, this.mm});
-  //final String event;
+  ClockState({this.event, this.hh, this.mm});
+  final String? event;
   final int? hh;
   final int? mm;
 }
