@@ -21,6 +21,6 @@ void main(List<String> arguments) {
   input.removeAt(0);
 
   input.forEach((e) {
-    print(provider.add(e).hh);
+    print(provider.add(e));
   });
 }

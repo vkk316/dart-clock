@@ -10,7 +10,7 @@ class OnState extends ClockState {
 
   @override
   String toString() {
-    return 'this is on state';
+    return 'this is on state\n Time : $hh:$mm';
   }
 }
 
@@ -19,10 +19,14 @@ class IncreseState extends ClockState {
 
   @override
   String toString() {
-    return 'this is increse state';
+    return 'this is increse state\n Time : $hh:$mm';
   }
 }
 
 class SetState extends ClockState {
   SetState({hh, mm}) : super(hh: hh++, mm: mm);
+  @override
+  String toString() {
+    return 'this is set state\n Time : $hh:$mm';
+  }
 }
