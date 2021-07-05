@@ -1,10 +1,17 @@
 import 'state.dart';
 
 class ClockProvider {
-  final String? initState;
-  ClockProvider({this.initState});
+  final ClockState? initState;
+  ClockProvider({this.initState}) : _state = initState;
+  ClockState? _state;
 
   ClockState add(String event) {
-    if(event == 'set')
+    if (event == 'set') {
+      return SetState(hh: _state!.hh, mm: _state!.mm);
+    } else if (event == 'inc') {
+      return IncreseState(hh: _state!.hh! + 1, mm: _state!.mm);
+    } else {
+      return _state!;
+    }
   }
 }

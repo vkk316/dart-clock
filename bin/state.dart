@@ -15,7 +15,7 @@ class OnState extends ClockState {
 }
 
 class IncreseState extends ClockState {
-  IncreseState({hh, mm}) : super(hh: hh++, mm: mm);
+  IncreseState({hh, mm}) : super(hh: hh, mm: mm);
 
   @override
   String toString() {
