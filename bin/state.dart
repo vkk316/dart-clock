@@ -7,4 +7,22 @@ abstract class ClockState {
 
 class OnState extends ClockState {
   OnState({hh, mm}) : super(hh: hh, mm: mm);
+
+  @override
+  String toString() {
+    return 'this is on state';
+  }
+}
+
+class IncreseState extends ClockState {
+  IncreseState({hh, mm}) : super(hh: hh++, mm: mm);
+
+  @override
+  String toString() {
+    return 'this is increse state';
+  }
+}
+
+class SetState extends ClockState {
+  SetState({hh, mm}) : super(hh: hh++, mm: mm);
 }
